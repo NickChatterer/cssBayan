@@ -1,3 +1,4 @@
+/* static setting */
 body {
     background-color: blanchedalmond;
 }
@@ -20,6 +21,8 @@ body {
 .acardeon-title:hover {
     color: black
 }
+
+/* expanded\collapsed item */
 
 .acardeon-title::after {
     content: "";
@@ -52,6 +55,8 @@ body {
     appearance: none;
     position: absolute;
 }
+
+/* accardion setting */
 
 .acardeon-input:checked ~ .acardeon-mem{
     display: block;
