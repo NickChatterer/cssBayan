@@ -1,0 +1,106 @@
+body {
+    background-color: blanchedalmond;
+}
+
+.wrapper {
+    max-width: 50rem;
+    margin: 0.2rem auto;
+}
+
+
+.acardeon-title {
+    display: block;
+    cursor: pointer;
+    padding: 0.1rem 0.15rem;
+    transition: .2sec ease-out;
+    position: relative; 
+    color: blue;  
+}
+
+.acardeon-title:hover {
+    color: black
+}
+
+.acardeon-title::after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 1rem 0.5rem 0 0.5rem;
+    border-color: #000 transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 0.15rem;
+    transform: translateY(-50%);
+    transition: all 1s;
+}
+
+.acardeon-input:checked ~ .acardeon-title:after {
+    border-style: solid;
+    border-width: 0 0.5rem 1rem 0.5rem;
+    border-color: transparent transparent #000 transparent;
+    transform: rotate(180deg);
+    transition: all 1s;
+}
+
+
+.acardeon-item {
+    margin-bottom: 0.5rem;
+}
+
+.acardeon-input {
+    appearance: none;
+    position: absolute;
+}
+
+.acardeon-input:checked ~ .acardeon-mem{
+    display: block;
+}
+
+
+.acardeon-mem {
+    display: none;
+    text-align: center;
+}
+
+
+.acardeon-mem:hover {
+    cursor: pointer;
+}
+
+img {
+    margin-left: 10rem;
+    max-width: 30rem;
+}
+
+/* media queris */
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        max-width: 20rem;
+    }
+
+    .acardeon-title {
+        font-size: 1rem;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        max-width: 30rem;
+    }
+    .acardeon-title {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+    .wrapper {
+        max-width: 50rem;
+    }
+    .acardeon-title {
+        font-size: 2rem;
+    }
+}
